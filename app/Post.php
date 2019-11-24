@@ -8,6 +8,10 @@ class Post extends Model
 {
     protected  $table = 'posts';
 
+    protected $fillable = [
+        'title','content', 'category_id', 'image',
+    ];
+
     //relacion uno a muchos pero inversa(muchos a uno).
     public function user(){
         return $this->belongsTo('App\User','user_id');
